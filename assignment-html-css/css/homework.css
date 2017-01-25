@@ -1,0 +1,259 @@
+html, body {
+  padding: 0;
+  margin: 0;
+
+  background-color: #4a525a;
+  font-family: Verdana, "Bitstream Vera Sans", sans-serif;
+  font-size: 11px;
+}
+/*sidebar, main을 float:left 설정하였으므로,
+부모 요소가 자식요소의 height인식하기 위해 clear 속성을
+가상선택자를 이용하여 추가함. */
+.clearfix::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+#box {
+  width: 720px;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 64px;
+  color: #eee;
+}
+#box > #logo {
+  width: 240px;
+  margin-left: 41px;
+  margin-bottom: 70px;
+}
+#box > #logo > a > img{
+  width: 100%;
+}
+#box > #logo > a > img:hover {
+  background-color: #555e66;
+}
+
+#box > #sidebar {
+  width: 160px;
+  text-align: right;
+  letter-spacing: 2px;
+
+  /*main하고 float:left 설정*/
+  float: left;
+}
+#box > #sidebar > p.author {
+  /*color: #eee;*/
+  margin: 0;
+  padding: 0;
+  margin-bottom: 53px;
+}
+#box > #sidebar > ul.sidebar-list {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+#box > #sidebar > ul.sidebar-list > li {
+  margin-bottom: 10px;
+}
+#box > #sidebar > ul.sidebar-list > li > a {
+  color: #eee;
+  text-decoration: none;
+  padding: 5px 1px;
+}
+#box > #sidebar > ul.sidebar-list > li > a:hover {
+  background-color: #555e66;
+}
+#box > #sidebar > div.sidebar-deck {
+  /*color: #eee;*/
+  position: bottom right;
+  margin-top: 176px;
+}
+#box > #sidebar > div.sidebar-deck > ul.deck-list {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#box > #sidebar > div.sidebar-deck > ul.deck-list > li.deck-img > a > img {
+  width: 120px;
+  height: 90px;
+}
+#box > #sidebar > div.sidebar-deck > ul.deck-list > li.deck-ads {
+  margin-top: 10px;
+  letter-spacing: normal;
+}
+#box > #sidebar > div.sidebar-deck > ul.deck-list > li.deck-ads > a {
+  color: #eee;
+  text-decoration: none;
+  padding: 4px 1px 2px 1px;
+  border-bottom: 1px solid #888;
+}
+#box > #sidebar > div.sidebar-deck > ul.deck-list > li.deck-ads > a:hover {
+  background-color: #555e66;
+}
+#box > #sidebar > div.sidebar-deck > ul.deck-list > li.deck-ads > span.text {
+  color: #ccc;
+  line-height: 1.7em;
+}
+#box > #sidebar > div.sidebar-deck > ul.deck-list > li.deck-via {
+  margin-top: 25px;
+}
+#box > #sidebar > div.sidebar-deck > ul.deck-list > li.deck-via > a > img:hover {
+  background-color: #606870;
+}
+
+#box > #main {
+  padding: 0;
+  margin: 0;
+  margin-left: 65px;
+  /*color: #eee;*/
+  width: 425px;
+
+  /*sidebar하고 float:left 설정*/
+  float: left;
+}
+#box > #main > h1 {
+  font-family: "Gill Sans MT", "Gill Sans", "Gill Sans Std", Georgia, serif;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-size: 1.55em;
+  font-weight: normal;
+}
+#box > #main > ul.menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 33px;
+}
+#box > #main > ul.menu-list > li {
+  float: left;
+  width: 77px;
+
+  /*padding: 1px 15px 2px 15px;
+  border: 1px solid #606870;
+  box-sizing: border-box;*/
+}
+#box > #main > ul.menu-list > li > a {
+  text-decoration: none;
+  color: #ccc;
+  text-align: center;
+  width: 100%;
+
+  padding: 1px 15px 2px 15px;
+  border: 1px solid #606870;
+  /*width가 100%를 넘어가 버리므로,
+  box-sizing: border-box 설정.*/
+  box-sizing: border-box;
+
+  /*5개의 border들을 block요소로 묶음.*/
+  display: inline-block;
+  /*5개의 border들을 수평 정렬 및 높이 설정.*/
+  line-height: 19px;
+  /*line-height: 1.8em;*/
+}
+#box > #main > ul.menu-list > li > a:hover {
+  background-color: #535c66;
+}
+#box > #main > ul.menu-list > li > a.selected {
+  background-color: #606870;
+  /*포인터 없음 처리.*/
+  cursor: default;
+}
+#box > #main > ul.contents {
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+}
+#box > #main > ul.contents li.contents-title {
+  margin: 0;
+  margin-bottom: 25px;
+  line-height: 1.8em;
+}
+#box > #main > ul.contents li a {
+  padding: 3px 0 2px 0;
+  color: #eee;
+  text-decoration: none;
+  border-bottom: 1px solid #888;
+}
+#box > #main > ul.contents li a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #606870;
+  border-color: #606870;
+}
+#box > #main > ul.contents li.contents-title ul.sub-contents {
+  padding: 0;
+  margin: 0;
+  margin-left: 25px;
+}
+#box > #main > p {
+  line-height: 1.8em;
+}
+#box > #main > p > strong {
+  letter-spacing: 0.2em;
+  font-weight: normal;
+  font-size: 0.91em;
+}
+#box > #main > p a {
+  padding: 3px 0 2px 0;
+  color: #eee;
+  text-decoration: none;
+  border-bottom: 1px solid #888;
+}
+#box > #main > p a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #606870;
+  border-color: #606870;
+}
+
+#box > #article {
+  padding: 0;
+  margin: 0;
+  margin-left: 225px;
+  margin-top: 50px;
+  width: 425px;
+
+  /*sidebar, main, article float:left 설정*/
+  float: left;
+}
+#box > #article > ul {
+  padding: 0;
+  margin: 0;
+}
+#box > #article > ul > div > p a {
+  color: #eee;
+  text-decoration: none;
+  padding: 3px 0 2px 0;
+  border-bottom: 1px solid #888;
+}
+#box > #article > ul > div > p a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #606870;
+  border-color: #606870;
+}
+#box > #article > ul h2 {
+  font-family: Georgia;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  margin-bottom: 2.9em;
+}
+#box > #article > ul > div h3 {
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  font-size: 0.91em;
+  line-height: 1.8em;
+  margin-bottom: 1.4em;
+}
+#box > #article > ul > div p {
+  margin-bottom: 1.6em;
+  line-height: 1.8em;
+}
