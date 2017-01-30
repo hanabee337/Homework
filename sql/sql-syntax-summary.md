@@ -1,5 +1,5 @@
 # SQL Tutorial
-```Reference : <http://www.w3schools.com/sql/default.asp>```
+Reference : <http://www.w3schools.com/sql/default.asp>
 
 ## SQL
 >	a standard language for accessing and manipulationg databases.
@@ -25,7 +25,6 @@
 ### SQL Statements
 - Most of the actions you need to perform on a database are done with SQL statements.
 - The following SQL statement selects all the records in the "Customers" table:  
-
 ```
 SQL
 Example
@@ -52,8 +51,7 @@ that allow more than one SQL statement to be executed in the same call to the se
 ### SQL Quick Reference From W3Schools
 - AND Operator
 	- displays a record if both the first condition AND the second condition are true.
-	- The following SQL statement selects all customers from the country "Germany" AND the city "Berlin", in the "Customers" table:
-
+	- The following SQL statement selects all customers from the country "Germany" AND the city "Berlin", in the "Customers" table:  
 	```
 	SELECT * FROM Customers
 	WHERE Country='Germany'
@@ -63,8 +61,7 @@ that allow more than one SQL statement to be executed in the same call to the se
 - OR Operator
 	- displays a record if either the first condition OR the second condition is true.
 
-	- The following SQL statement selects all customers from the city "Berlin" OR "München", in the "Customers" table:
-
+	- The following SQL statement selects all customers from the city "Berlin" OR "München", in the "Customers" table:  
 	```
 	SELECT * FROM Customers
 	WHERE City='Berlin'
@@ -74,14 +71,13 @@ that allow more than one SQL statement to be executed in the same call to the se
 - ALTER TABLE Statement
 	- used to add, delete, or modify columns in an existing table
 	- SQL ALTER TABLE Syntax
-	- To add a column in a table, use the following syntax:
-
+	- To add a column in a table, use the following syntax:  
 	```
 	ALTER TABLE table_name
 	ADD column_name datatype
 	```
 	
-	- To delete a column in a table, use the following syntax (notice that some database systems don't allow deleting a column):
+	- To delete a column in a table, use the following syntax (notice that some database systems don't allow deleting a column):  
 	```
 	ALTER TABLE table_name
 	DROP COLUMN column_name
@@ -97,14 +93,12 @@ that allow more than one SQL statement to be executed in the same call to the se
 		- Two or more columns are combined together
 	
 	- SQL Alias Syntax for Columns  
-	
 	```
 	SELECT column_name AS alias_name
 	FROM table_name;
 	```
 
 	- SQL Alias Syntax for Tables  
-
 	```
 	SELECT column_name(s)
 	FROM table_name AS alias_name;
@@ -121,15 +115,13 @@ that allow more than one SQL statement to be executed in the same call to the se
 - BETWEEN Operator
 	- used to select values within a range.
 	- The values can be numbers, text, or dates.
-	- SQL BETWEEN Syntax
-
+	- SQL BETWEEN Syntax  
 	```
 	SELECT column_name(s)
 	FROM table_name
 	WHERE column_name BETWEEN value1 AND value2;
 	```
-	- The following SQL statement selects all products with a price BETWEEN 10 and 20:
-
+	- The following SQL statement selects all products with a price BETWEEN 10 and 20:  
 	```
 	SELECT * FROM Products
 	WHERE Price BETWEEN 10 AND 20;
@@ -360,7 +352,7 @@ that allow more than one SQL statement to be executed in the same call to the se
 - INSERT INTO Statement
 	- used to insert new records in a table.
 	- Syntax
-		1. first form does not specify the column names where the data will be inserted, only their values.
+		1. first form does not specify the column names where the data will be inserted, only their values.  
 			```
 			INSERT INTO table_name
 			VALUES (value1,value2,value3,...);
@@ -370,7 +362,7 @@ that allow more than one SQL statement to be executed in the same call to the se
 			INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
 			VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway');
 			```
-		2. second form specifies both the column names and the values to be inserted.
+		2. second form specifies both the column names and the values to be inserted.  
 			```
 			INSERT INTO table_name (column1,column2,column3,...)
 			VALUES (value1,value2,value3,...);
